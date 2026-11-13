@@ -1,55 +1,24 @@
-import { Github, Instagram, Twitter, Youtube } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer id="suporte" className="relative border-t border-white/5 px-5 py-16">
+    <footer className="border-t border-white/10 bg-[#07111f] px-5 py-12 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="grid md:grid-cols-[1.5fr_1fr_1fr_1fr] gap-10">
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-[#7B2EFF] to-[#3a0d8a] neon-glow-soft flex items-center justify-center font-display font-bold">
-                V
-              </div>
-              <span className="font-display text-xl font-semibold">VIA</span>
-            </div>
-            <p className="text-sm text-muted-foreground max-w-xs">
-              A operadora digital da nova geração. Conectividade premium para quem vive online.
-            </p>
-            <div className="mt-5 flex gap-2">
-              {[Instagram, Twitter, Youtube, Github].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="h-9 w-9 rounded-full glass flex items-center justify-center hover:bg-[#7B2EFF]/20 transition-colors"
-                  aria-label="Social"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
-            </div>
+        <div className="flex flex-col justify-between gap-10 md:flex-row md:items-start">
+          <div className="max-w-sm">
+            <a href="#top" className="font-display text-3xl font-bold tracking-[-0.09em] text-white">VIA<span className="text-[#b8f36b]">.</span></a>
+            <p className="mt-4 text-sm leading-6 text-slate-400">Uma nova proposta de conectividade móvel, em construção.</p>
           </div>
-          {[
-            { title: "Produto", links: ["Planos", "Cobertura", "App", "Benefícios"] },
-            { title: "Empresa", links: ["Empresas", "Sobre", "Carreiras", "Imprensa"] },
-            { title: "Suporte", links: ["Central de ajuda", "Contato", "Termos", "Privacidade"] },
-          ].map((col) => (
-            <div key={col.title}>
-              <div className="text-xs uppercase tracking-[0.2em] text-[#B79BFF] mb-4">{col.title}</div>
-              <ul className="space-y-2.5">
-                {col.links.map((l) => (
-                  <li key={l}>
-                    <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                      {l}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className="flex flex-wrap gap-x-8 gap-y-4 text-sm text-slate-400">
+            <a href="#proposta" className="hover:text-white">A proposta</a>
+            <a href="#solucoes" className="hover:text-white">Soluções</a>
+            <a href="#empresas" className="hover:text-white">Empresas</a>
+            <a href="#contato" className="inline-flex items-center gap-1 hover:text-white">Contato <ArrowUpRight className="h-3 w-3"/></a>
+          </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-muted-foreground">
-          <div>© {new Date().getFullYear()} VIA Tecnologia. Todos os direitos reservados.</div>
-          <div>Feito para a nova geração 🇧🇷</div>
+        <div className="mt-12 flex flex-col justify-between gap-3 border-t border-white/10 pt-6 text-xs text-slate-500 sm:flex-row">
+          <span>© {new Date().getFullYear()} VIA. Todos os direitos reservados.</span>
+          <span>Uma marca em desenvolvimento por Studio Alfa.</span>
         </div>
       </div>
     </footer>
