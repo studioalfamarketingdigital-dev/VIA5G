@@ -10,7 +10,7 @@ export function FinalCTA() {
             <h2 className="font-display text-4xl font-semibold leading-tight tracking-[-0.045em] text-white sm:text-6xl">O próximo passo da conectividade está sendo construído.</h2>
             <p className="mt-6 max-w-xl text-base leading-7 text-slate-300">Estamos preparando os próximos capítulos da VIA. Em breve, divulgaremos novidades sobre produtos, disponibilidade e lançamento.</p>
           </div>
-          <a href="mailto:contato@via.com.br?subject=Quero%20acompanhar%20a%20VIA" className="inline-flex items-center justify-center gap-3 rounded-full bg-[#b8f36b] px-7 py-4 text-sm font-semibold text-[#101b0d] transition hover:-translate-y-0.5 hover:bg-[#cbff85]">Falar com a equipe <ArrowUpRight className="h-4 w-4"/></a>
+          <a href="#solucoes" className="inline-flex items-center justify-center gap-3 rounded-full bg-[#b8f36b] px-7 py-4 text-sm font-semibold text-[#101b0d] transition hover:-translate-y-0.5 hover:bg-[#cbff85]">Conhecer as soluções <ArrowUpRight className="h-4 w-4"/></a>
         </div>
       </div>
     </section>
