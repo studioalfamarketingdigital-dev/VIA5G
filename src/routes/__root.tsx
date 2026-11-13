@@ -72,16 +72,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "via-5g" },
-      { name: "description", content: "A VIA é uma operadora móvel da nova geração" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "via-5g" },
-      { property: "og:description", content: "A VIA é uma operadora móvel da nova geração" },
+      { title: "VIA — Conectividade em uma nova direção" },
+      { name: "description", content: "Uma nova proposta de conectividade móvel, em construção." },
+      { name: "author", content: "VIA" },
+      { property: "og:title", content: "VIA — Conectividade em uma nova direção" },
+      { property: "og:description", content: "Uma nova experiência em conectividade móvel está a caminho." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "via-5g" },
-      { name: "twitter:description", content: "A VIA é uma operadora móvel da nova geração" },
+      
+      { name: "twitter:title", content: "VIA — Conectividade em uma nova direção" },
+      { name: "twitter:description", content: "Uma nova experiência em conectividade móvel está a caminho." },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/706b8e28-bdb8-41df-b037-d28362669ca3" },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/706b8e28-bdb8-41df-b037-d28362669ca3" },
     ],
@@ -100,7 +100,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>
