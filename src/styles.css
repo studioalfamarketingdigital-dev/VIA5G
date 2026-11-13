@@ -61,16 +61,16 @@
 :root {
   --radius: 1rem;
 
-  --background: oklch(0.06 0.005 280);
-  --foreground: oklch(0.97 0.005 280);
+  --background: #07111f;
+  --foreground: #f8fafc;
 
-  --card: oklch(0.09 0.01 280);
-  --card-foreground: oklch(0.97 0.005 280);
-  --popover: oklch(0.09 0.01 280);
-  --popover-foreground: oklch(0.97 0.005 280);
+  --card: #0c1a2b;
+  --card-foreground: #f8fafc;
+  --popover: #0c1a2b;
+  --popover-foreground: #f8fafc;
 
-  --primary: oklch(0.62 0.26 295);
-  --primary-foreground: oklch(0.98 0 0);
+  --primary: #b8f36b;
+  --primary-foreground: #101b0d;
 
   --secondary: oklch(0.15 0.01 280);
   --secondary-foreground: oklch(0.97 0.005 280);
@@ -86,7 +86,7 @@
 
   --border: oklch(1 0 0 / 8%);
   --input: oklch(1 0 0 / 10%);
-  --ring: oklch(0.62 0.26 295);
+  --ring: #b8f36b;
 
   --sidebar: oklch(0.08 0.01 280);
   --sidebar-foreground: oklch(0.97 0.005 280);
@@ -111,14 +111,14 @@
     scroll-behavior: smooth;
   }
   body {
-    background-color: #050505;
+    background-color: #07111f;
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }
   ::selection {
-    background: #7B2EFF;
-    color: white;
+    background: #b8f36b;
+    color: #101b0d;
   }
 }
 
