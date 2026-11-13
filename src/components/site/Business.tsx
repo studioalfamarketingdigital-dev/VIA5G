@@ -1,45 +1,26 @@
-import { ArrowRight, Building2, Settings2, Users } from "lucide-react";
+import { ArrowUpRight, Network, Users, ChartNoAxesCombined } from "lucide-react";
 
 export function Business() {
   return (
-    <section id="empresas" className="relative py-32 px-5">
-      <div className="mx-auto max-w-7xl">
-        <div className="glass-strong rounded-3xl p-10 md:p-16 relative overflow-hidden">
-          <div className="absolute -top-20 -right-20 h-80 w-80 rounded-full bg-[#7B2EFF]/20 blur-[100px]" />
-          <div className="relative grid md:grid-cols-2 gap-10 items-center">
-            <div>
-              <div className="text-xs uppercase tracking-[0.2em] text-[#B79BFF] mb-3">VIA Empresas</div>
-              <h2 className="font-display text-3xl sm:text-4xl font-bold text-gradient">
-                Soluções móveis para empresas modernas.
-              </h2>
-              <p className="mt-4 text-muted-foreground max-w-md">
-                Conectividade, gestão e personalização sob medida para times que não param.
-              </p>
-              <a
-                href="#cta"
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-white text-black px-5 py-3 text-sm font-medium hover:scale-[1.03] transition-all"
-              >
-                Falar com vendas <ArrowRight className="h-4 w-4" />
-              </a>
+    <section id="empresas" className="border-y border-white/10 bg-[#0a1726] px-5 py-24 lg:px-8 lg:py-32">
+      <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2">
+        <div>
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[#b8f36b]">VIA Empresas</p>
+          <h2 className="font-display text-4xl font-semibold leading-tight tracking-[-0.045em] text-white sm:text-5xl">Negócios em movimento precisam de conexões confiáveis.</h2>
+          <p className="mt-6 max-w-xl text-base leading-7 text-slate-400">Estamos desenvolvendo uma frente dedicada a empresas que precisam organizar linhas, acompanhar serviços e ter mais clareza sobre sua conectividade.</p>
+          <a href="#contato" className="mt-8 inline-flex items-center gap-3 rounded-full border border-[#b8f36b]/40 px-6 py-3.5 text-sm font-semibold text-[#d4ffab] transition hover:bg-[#b8f36b]/10">Conhecer a proposta empresarial <ArrowUpRight className="h-4 w-4"/></a>
+        </div>
+        <div className="grid gap-3">
+          {[
+            { icon: Users, title: "Pessoas e equipes", desc: "Uma visão de conectividade que considera a rotina de quem trabalha." },
+            { icon: Network, title: "Gestão centralizada", desc: "Planejamento de uma experiência que facilite a administração de linhas e serviços." },
+            { icon: ChartNoAxesCombined, title: "Clareza operacional", desc: "Informações organizadas para apoiar decisões e controle de custos." },
+          ].map((item, index) => (
+            <div key={item.title} className="flex gap-5 rounded-2xl border border-white/10 bg-[#0d1d2f] p-6">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#b8f36b]/10 text-[#c8f99a]"><item.icon className="h-5 w-5"/></div>
+              <div><h3 className="font-display text-lg font-semibold text-white">{item.title}</h3><p className="mt-1 text-sm leading-6 text-slate-400">{item.desc}</p></div>
             </div>
-            <div className="grid gap-3">
-              {[
-                { icon: Users, title: "Linhas corporativas", desc: "Linhas para todo o time, com gestão centralizada." },
-                { icon: Building2, title: "Gestão empresarial", desc: "Painel único para administrar consumo e custos." },
-                { icon: Settings2, title: "Personalização de planos", desc: "Planos sob medida para o tamanho da sua operação." },
-              ].map((c) => (
-                <div key={c.title} className="glass rounded-2xl p-5 flex gap-4 hover-lift">
-                  <div className="h-10 w-10 rounded-xl bg-[#7B2EFF]/15 border border-[#7B2EFF]/30 flex items-center justify-center shrink-0">
-                    <c.icon className="h-5 w-5 text-[#B79BFF]" />
-                  </div>
-                  <div>
-                    <div className="font-display font-semibold">{c.title}</div>
-                    <div className="text-sm text-muted-foreground">{c.desc}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
