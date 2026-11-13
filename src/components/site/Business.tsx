@@ -1,4 +1,4 @@
-import { ArrowUpRight, Network, Users, ChartNoAxesCombined } from "lucide-react";
+import { ArrowUpRight, Network, Users, BarChart3 } from "lucide-react";
 
 export function Business() {
   return (
