@@ -1,49 +1,36 @@
-import {
-  Globe, Zap, Smartphone, Brain, MessageSquare, Sliders,
-  Cpu, Sparkles, AppWindow, Activity,
-} from "lucide-react";
+import { Compass, ShieldCheck, Smartphone, Users, Briefcase, Eye } from "lucide-react";
 
 const items = [
-  { icon: Globe, title: "Cobertura nacional", desc: "Conectividade em todo o Brasil com rede 5G e LTE." },
-  { icon: Zap, title: "Ativação digital", desc: "Ative sua linha em minutos, sem fila e sem loja." },
-  { icon: Smartphone, title: "Controle total pelo app", desc: "Gerencie plano, consumo e pagamentos em segundos." },
-  { icon: Activity, title: "Gestão inteligente de consumo", desc: "Acompanhe seus dados em tempo real e evite surpresas." },
-  { icon: MessageSquare, title: "Atendimento digital", desc: "Suporte direto pelo app, sem espera em call center." },
-  { icon: Sliders, title: "Planos flexíveis", desc: "Troque, ajuste e personalize quando quiser." },
-  { icon: Cpu, title: "Tecnologia moderna", desc: "Infraestrutura nova, pensada para alta performance." },
-  { icon: Sparkles, title: "Experiência simplificada", desc: "Sem letras miúdas. Tudo claro, direto e digital." },
-  { icon: Brain, title: "Recursos inteligentes", desc: "Recomendações automatizadas baseadas no seu uso." },
-  { icon: AppWindow, title: "Aplicativo avançado", desc: "Interface premium pensada para a nova geração." },
+  { icon: Smartphone, number: "01", title: "Experiência digital", desc: "Uma jornada simples para conhecer, contratar e administrar serviços de conectividade." },
+  { icon: Eye, number: "02", title: "Transparência", desc: "Informações objetivas, condições claras e menos complexidade em cada etapa." },
+  { icon: Users, number: "03", title: "Atendimento humano", desc: "Tecnologia para facilitar a rotina, sem deixar de lado o contato com pessoas." },
+  { icon: Briefcase, number: "04", title: "Visão empresarial", desc: "Uma proposta que considera também as necessidades de equipes e operações." },
+  { icon: ShieldCheck, number: "05", title: "Confiança", desc: "Compromisso com segurança, privacidade e responsabilidade na relação com clientes." },
+  { icon: Compass, number: "06", title: "Evolução contínua", desc: "Uma marca criada para evoluir junto com a forma como as pessoas se conectam." },
 ];
 
 export function Benefits() {
   return (
-    <section id="beneficios" className="relative py-32 px-5">
+    <section id="proposta" className="border-t border-white/10 bg-[#0a1726] px-5 py-24 lg:px-8 lg:py-32">
       <div className="mx-auto max-w-7xl">
-        <div className="max-w-2xl mb-16">
-          <div className="text-xs uppercase tracking-[0.2em] text-[#B79BFF] mb-3">Benefícios</div>
-          <h2 className="font-display text-4xl sm:text-5xl font-bold text-gradient">
-            Tudo que uma operadora moderna deveria ser.
-          </h2>
-        </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-          {items.map((b, i) => (
-            <div
-              key={b.title}
-              className="group glass rounded-2xl p-6 hover-lift relative overflow-hidden"
-              style={{ animationDelay: `${i * 60}ms` }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#7B2EFF]/0 to-[#7B2EFF]/0 group-hover:from-[#7B2EFF]/10 group-hover:to-transparent transition-all duration-500" />
-              <div className="relative">
-                <div className="h-10 w-10 rounded-xl bg-[#7B2EFF]/15 border border-[#7B2EFF]/30 flex items-center justify-center mb-4 group-hover:bg-[#7B2EFF]/25 transition-colors">
-                  <b.icon className="h-5 w-5 text-[#B79BFF]" />
+        <div className="grid gap-10 lg:grid-cols-[.85fr_1.15fr]">
+          <div className="max-w-xl">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[#b8f36b]">O que estamos construindo</p>
+            <h2 className="font-display text-4xl font-semibold leading-tight tracking-[-0.045em] text-white sm:text-5xl">Tecnologia com propósito. Conexões com sentido.</h2>
+            <p className="mt-6 text-base leading-7 text-slate-400">A VIA nasce com uma ideia central: tornar a conectividade mais fácil de entender e mais simples de administrar, tanto na vida pessoal quanto no ambiente de trabalho.</p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {items.map((item) => (
+              <article key={item.number} className="group rounded-2xl border border-white/10 bg-white/[0.025] p-6 transition hover:-translate-y-1 hover:border-[#b8f36b]/30 hover:bg-white/[0.045]">
+                <div className="flex items-center justify-between">
+                  <item.icon className="h-5 w-5 text-[#b8f36b]"/>
+                  <span className="font-mono text-xs text-slate-600">{item.number}</span>
                 </div>
-                <h3 className="font-display font-semibold text-base mb-1.5">{b.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
-              </div>
-            </div>
-          ))}
+                <h3 className="mt-7 font-display text-lg font-semibold text-white">{item.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-slate-400">{item.desc}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
