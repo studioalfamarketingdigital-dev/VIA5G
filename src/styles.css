@@ -90,12 +90,12 @@
 
   --sidebar: oklch(0.08 0.01 280);
   --sidebar-foreground: oklch(0.97 0.005 280);
-  --sidebar-primary: oklch(0.62 0.26 295);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-primary: #b8f36b;
+  --sidebar-primary-foreground: #101b0d;
   --sidebar-accent: oklch(0.15 0.01 280);
   --sidebar-accent-foreground: oklch(0.97 0.005 280);
   --sidebar-border: oklch(1 0 0 / 8%);
-  --sidebar-ring: oklch(0.62 0.26 295);
+  --sidebar-ring: #b8f36b;
 }
 
 .dark {
@@ -142,19 +142,19 @@
 
   .neon-glow {
     box-shadow:
-      0 0 30px rgba(123, 46, 255, 0.45),
-      0 0 60px rgba(123, 46, 255, 0.25),
-      0 10px 40px -10px rgba(123, 46, 255, 0.6);
+      0 0 30px rgba(184, 243, 107, 0.18),
+      0 0 60px rgba(184, 243, 107, 0.10),
+      0 10px 40px -10px rgba(184, 243, 107, 0.2);
   }
 
   .neon-glow-soft {
     box-shadow:
-      0 0 20px rgba(123, 46, 255, 0.25),
+      0 0 20px rgba(184, 243, 107, 0.25),
       0 0 50px rgba(123, 46, 255, 0.12);
   }
 
   .text-gradient {
-    background: linear-gradient(180deg, #ffffff 0%, #ffffff 50%, #B79BFF 100%);
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 50%, #b8f36b 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
